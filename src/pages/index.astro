@@ -140,24 +140,23 @@ import '../styles/global.scss'
 <SiteScrollbar />
 
   </body>    <script>  
-    import Emitter from '../utils/Emitter'  
-    import Ticker from '../utils/Ticker'  
-  
-    import Lenis from 'lenis'  
-  
-    import { gsap } from 'gsap'  
-    import { ScrollTrigger } from 'gsap/ScrollTrigger'  
-    gsap.registerPlugin(ScrollTrigger)  
-  
-    declare global {  
-      interface Window {  
-        safeWidth: number  
-        safeHeight: number  
-        maxScrollTop: number  
-        scrollProgress: number  
-        lenis: any  
-      }  
-    }  
+    <script type="module" lang="ts">
+  import Emitter from '../utils/Emitter'
+  import Ticker from '../utils/Ticker'
+  import Lenis from 'lenis'
+  import { gsap } from 'gsap'
+  import { ScrollTrigger } from 'gsap/ScrollTrigger'
+  gsap.registerPlugin(ScrollTrigger)
+
+  declare global {
+    interface Window {
+      safeWidth: number
+      safeHeight: number
+      maxScrollTop: number
+      scrollProgress: number
+      lenis: any
+    }
+  }
   
     class Site {  
       timeouts: any = {  
